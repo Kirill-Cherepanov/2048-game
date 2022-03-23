@@ -27,7 +27,10 @@ if (localStorage.getItem('2048-best-score') === null) {
 }
 bestScore.innerText = localStorage.getItem('2048-best-score');
 
-retryButton.addEventListener('click', game.newGame.bind(game));
+retryButton.addEventListener('click', () => {
+    grid.style.backgroundColor = null;
+    game.newGame();
+});
 
 // Swipe initialization
 let afterEvent = swipe.addEventListener('after', (direction) => {

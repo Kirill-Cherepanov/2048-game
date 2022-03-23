@@ -112,14 +112,14 @@ h1 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 32px;
+  font-size: 2rem;
   font-weight: bold;
   position: relative;
 }
 
 @media (min-width: 520px) {
   .gameboard .tile {
-    font-size: 54px;
+    font-size: 3rem;
   }
 }
 
@@ -135,21 +135,21 @@ h1 {
   .gameboard .tile-2048,
   .gameboard .tile-4096,
   .gameboard .tile-8192 {
-    font-size: 3rem;
+    font-size: 2.7rem;
   }
 }
 
 .gameboard .tile-16384,
 .gameboard .tile-32768,
 .gameboard .tile-65536 {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
 }
 
 @media (min-width: 520px) {
   .gameboard .tile-16384,
   .gameboard .tile-32768,
   .gameboard .tile-65536 {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
   }
 }
 
@@ -160,7 +160,7 @@ h1 {
 
 @media (min-width: 520px) {
   .gameboard .tile-131072 {
-    font-size: 2rem;
+    font-size: 2.1rem;
   }
 }
 
