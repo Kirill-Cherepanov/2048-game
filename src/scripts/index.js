@@ -1,8 +1,4 @@
-//TODO
-// Анимация
-// gameOver
-
-import GameBoard from './Gameboard.js';
+import GameBoard from './GameBoard.js';
 import Swipe from './Swipe.js';
 
 const gameboard = document.querySelector('.gameboard');
