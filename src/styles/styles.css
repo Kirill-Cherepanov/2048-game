@@ -74,6 +74,8 @@ h1 {
 }
 
 .gameboard {
+  -ms-touch-action: none;
+      touch-action: none;
   position: absolute;
   top: 0px;
   width: 280px;

@@ -49,19 +49,21 @@ export default class Swipe {
 		return Object.keys(directions).sort((a, b) => directions[b] - directions[a]);
 	}
 	
-	addEventListener(evt, bc) {
+	addEventListener(evt, callback) {
 		const keys = Object.keys(this.events);
-		if (keys.indexOf(evt) !== -1) {
-		  this.events[evt].push(bc);
-	    const i = this.events.length - 1;
-		  return {
-		    clear: () => {
-			    this.events[i] = undefined;
-		    }
-	    };
-		} else {
-			throw new Error("Event is not valid, use " + keys.join(", "));
-		}
+    
+		if (keys.indexOf(evt) === -1) {
+      throw new Error("Event is not valid, use " + keys.join(", "));
+    }
+
+    this.events[evt].push(callback);
+    const i = this.events.length - 1;
+    
+    return {
+      clear: () => {
+        this.events[i] = undefined;
+      }
+    };
 	}
 	
 	down(e) {
@@ -122,11 +124,11 @@ export default class Swipe {
 	}
 	
 	addListeners() {	
-	  this.elem.addEventListener("touchstart", e => this.down(e));
+	  //this.elem.addEventListener("touchstart", e => this.down(e));
 	  this.elem.addEventListener("pointerdown", e => this.down(e));
-	  this.elem.addEventListener("touchmove", e => this.move(e));
+	  //this.elem.addEventListener("touchmove", e => this.move(e));
 	  document.addEventListener("pointermove", e => this.move(e));
-	  this.elem.addEventListener("touchend", e => this.up(e));
+	  //this.elem.addEventListener("touchend", e => this.up(e));
 	  document.addEventListener("pointerup", e => this.up(e));
 	}
 }

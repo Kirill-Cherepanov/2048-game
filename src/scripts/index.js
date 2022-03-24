@@ -29,7 +29,7 @@ retryButton.addEventListener('click', () => {
 });
 
 // Swipe initialization
-let afterEvent = swipe.addEventListener('after', (direction) => {
+swipe.addEventListener('after', direction => {
     if (Date.now() - lastMoveTime < moveDelay) return;
     lastMoveTime = Date.now();
 
