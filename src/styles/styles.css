@@ -1,10 +1,10 @@
 @font-face {
-  font-family: "evil-empire";
-  src: url("../fonts/EvilEmpire.ttf");
+  font-family: 'evil-empire';
+  src: url('../fonts/EvilEmpire.ttf');
 }
 
 body {
-  font-family: "evil-empire", sans-serif;
+  font-family: 'evil-empire', sans-serif;
   letter-spacing: 1px;
 }
 
@@ -25,14 +25,14 @@ body {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 h1 {
@@ -55,7 +55,7 @@ h1 {
   font-size: 20px;
   border: none;
   background-color: #806a55;
-  color: #FFF;
+  color: #fff;
   cursor: pointer;
   border-radius: 3px;
   font-weight: bold;
@@ -75,7 +75,7 @@ h1 {
 
 .gameboard {
   -ms-touch-action: none;
-      touch-action: none;
+  touch-action: none;
   position: absolute;
   top: 0px;
   width: 280px;
@@ -83,10 +83,10 @@ h1 {
   padding: 10px;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[4];
-      grid-template-columns: repeat(4, 1fr);
-  -ms-grid-rows: (1fr)[4];
-      grid-template-rows: repeat(4, 1fr);
+  -ms-grid-columns: (1fr) [4];
+  grid-template-columns: repeat(4, 1fr);
+  -ms-grid-rows: (1fr) [4];
+  grid-template-rows: repeat(4, 1fr);
   gap: 10px;
   border-radius: 5px;
 }
@@ -109,11 +109,11 @@ h1 {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   font-size: 2rem;
   font-weight: bold;
   position: relative;
@@ -174,10 +174,10 @@ h1 {
   background-color: #bbaa99;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[4];
-      grid-template-columns: repeat(4, 1fr);
-  -ms-grid-rows: (1fr)[4];
-      grid-template-rows: repeat(4, 1fr);
+  -ms-grid-columns: (1fr) [4];
+  grid-template-columns: repeat(4, 1fr);
+  -ms-grid-rows: (1fr) [4];
+  grid-template-rows: repeat(4, 1fr);
   gap: 10px;
   border-radius: 5px;
 }
@@ -207,7 +207,7 @@ h1 {
 
 .scores-container > * {
   background-color: #bbaa99;
-  color: #FFF;
+  color: #fff;
   padding: 5px 15px 0;
   border-radius: 3px;
   text-align: center;

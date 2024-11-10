@@ -1,0 +1,14 @@
+{
+  "name": "2048-game",
+  "version": "1.0.0",
+  "main": "./index.html",
+  "repository": "https://github.com/Kirill-Cherepanov/2048-game.git",
+  "author": "Kirill Cherepanov <kirill.cherepanov@imbuesystems.com>",
+  "license": "MIT",
+  "scripts": {
+    "lint:fix": "prettier ./src --write --log-level silent"
+  },
+  "dependencies": {
+    "prettier": "^3.3.3"
+  }
+}
