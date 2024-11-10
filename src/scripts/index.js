@@ -47,7 +47,6 @@ swipe.addEventListener('after', (direction) => {
       break;
   }
 });
-// Remove event with evt.clear();
 
 document.addEventListener('keydown', (e) => {
   switch (e.key) {

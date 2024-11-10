@@ -94,17 +94,17 @@ export default class GameBoard {
             }
         }
 
-        // Проверяем наличие плитки на клетке
+        // Check if a tile is empty
         if (vTiles[currentTile[0]][currentTile[1]] === 0) {
           continue;
         }
 
-        // Следующая просматриваемая позиция (по направлению движения)
         let nextPos = [currentTile[0] - direction[0], currentTile[1] + direction[1]];
 
         for (let k = 1; ; nextPos = [currentTile[0] - direction[0] * ++k, currentTile[1] + direction[1] * k]) {
-          // Если конец доски, доcки, то оставляем плитку на нем
+          // Leave a tile at the edge of the board
           if (nextPos[0] < 0 || nextPos[1] < 0 || nextPos[0] > 3 || nextPos[1] > 3) {
+            // Don't move if already at the edge
             if (k === 1) break;
 
             moves.push([currentTile, k - 1, false]);
@@ -113,12 +113,12 @@ export default class GameBoard {
             vTiles[currentTile[0]][currentTile[1]] = 0;
           }
 
-          // Если плитка отсутствует, проверяем дальше
+          // Move on if a tile is empty
           else if (vTiles[nextPos[0]][nextPos[1]] === 0) {
             continue;
           }
 
-          // Объединяем плитки, если они равны по значению
+          // If the tiles are equal, merge them
           else if (
             vTiles[nextPos[0]][nextPos[1]] === vTiles[currentTile[0]][currentTile[1]] &&
             !mergedTiles.some((tile) => tile === nextPos.toString())
@@ -132,9 +132,9 @@ export default class GameBoard {
             vScore += vTiles[nextPos[0]][nextPos[1]];
           }
 
-          // Если плитки не равны, то оставляем первую плитку около второй
+          // If tiles are not equal, leave them beside each other
           else {
-            // Если вторая плитка и так является соседней
+            // Don't move if the tiles are already beside each other
             if (k === 1) break;
 
             moves.push([currentTile, k - 1, false]);

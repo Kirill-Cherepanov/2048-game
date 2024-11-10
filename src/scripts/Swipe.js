@@ -124,11 +124,8 @@ export default class Swipe {
   }
 
   addListeners() {
-    //this.elem.addEventListener("touchstart", e => this.down(e));
     this.elem.addEventListener('pointerdown', (e) => this.down(e));
-    //this.elem.addEventListener("touchmove", e => this.move(e));
     document.addEventListener('pointermove', (e) => this.move(e));
-    //this.elem.addEventListener("touchend", e => this.up(e));
     document.addEventListener('pointerup', (e) => this.up(e));
   }
 }
