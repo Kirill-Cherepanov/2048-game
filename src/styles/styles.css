@@ -1,10 +1,9 @@
 @font-face {
-  font-family: 'evil-empire';
-  src: url('../fonts/EvilEmpire.ttf');
+  font-family: "evil-empire";
+  src: url("../fonts/EvilEmpire.ttf");
 }
-
 body {
-  font-family: 'evil-empire', sans-serif;
+  font-family: "evil-empire", sans-serif;
   letter-spacing: 1px;
 }
 
@@ -12,7 +11,6 @@ body {
   margin: 20px auto;
   width: 300px;
 }
-
 @media (min-width: 520px) {
   .page {
     width: 450px;
@@ -20,18 +18,9 @@ body {
 }
 
 .heading {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
   justify-content: space-between;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -41,7 +30,6 @@ h1 {
   margin: 0;
   color: #806a55;
 }
-
 @media (min-width: 520px) {
   h1 {
     font-size: 4rem;
@@ -55,12 +43,11 @@ h1 {
   font-size: 20px;
   border: none;
   background-color: #806a55;
-  color: #fff;
+  color: #FFF;
   cursor: pointer;
   border-radius: 3px;
   font-weight: bold;
 }
-
 @media (min-width: 520px) {
   .retry {
     height: 55px;
@@ -74,23 +61,22 @@ h1 {
 }
 
 .gameboard {
-  -ms-touch-action: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  cursor: default;
   touch-action: none;
   position: absolute;
   top: 0px;
   width: 280px;
   height: 280px;
   padding: 10px;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr) [4];
   grid-template-columns: repeat(4, 1fr);
-  -ms-grid-rows: (1fr) [4];
   grid-template-rows: repeat(4, 1fr);
   gap: 10px;
   border-radius: 5px;
 }
-
 @media (min-width: 520px) {
   .gameboard {
     width: 420px;
@@ -100,38 +86,28 @@ h1 {
     border-radius: 8px;
   }
 }
-
 .gameboard .tile {
   letter-spacing: 0;
   border-radius: 5px;
   color: #806a55;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   font-size: 2rem;
   font-weight: bold;
   position: relative;
 }
-
 @media (min-width: 520px) {
   .gameboard .tile {
     font-size: 3rem;
   }
 }
-
 .gameboard .tile-1024,
 .gameboard .tile-2048,
 .gameboard .tile-4096,
 .gameboard .tile-8192 {
   font-size: 1.7rem;
 }
-
 @media (min-width: 520px) {
   .gameboard .tile-1024,
   .gameboard .tile-2048,
@@ -140,13 +116,11 @@ h1 {
     font-size: 2.7rem;
   }
 }
-
 .gameboard .tile-16384,
 .gameboard .tile-32768,
 .gameboard .tile-65536 {
   font-size: 1.4rem;
 }
-
 @media (min-width: 520px) {
   .gameboard .tile-16384,
   .gameboard .tile-32768,
@@ -154,12 +128,10 @@ h1 {
     font-size: 2.2rem;
   }
 }
-
 .gameboard .tile-131072 {
   color: #fff;
   font-size: 1.3rem;
 }
-
 @media (min-width: 520px) {
   .gameboard .tile-131072 {
     font-size: 2.1rem;
@@ -172,16 +144,12 @@ h1 {
   margin: 20px auto;
   padding: 10px;
   background-color: #bbaa99;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr) [4];
   grid-template-columns: repeat(4, 1fr);
-  -ms-grid-rows: (1fr) [4];
   grid-template-rows: repeat(4, 1fr);
   gap: 10px;
   border-radius: 5px;
 }
-
 @media (min-width: 520px) {
   .grid-container {
     width: 420px;
@@ -191,7 +159,6 @@ h1 {
     border-radius: 8px;
   }
 }
-
 .grid-container .grid-cell {
   background-color: #cfc4b8;
   border-radius: 5px;
@@ -199,20 +166,16 @@ h1 {
 
 .scores-container {
   float: right;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   gap: 10px;
 }
-
 .scores-container > * {
   background-color: #bbaa99;
-  color: #fff;
+  color: #FFF;
   padding: 5px 15px 0;
   border-radius: 3px;
   text-align: center;
 }
-
 @media (min-width: 520px) {
   .scores-container > * {
     min-width: 50px;
@@ -220,9 +183,7 @@ h1 {
     padding: 5px 25px 0;
   }
 }
-
 .scores-container > * span {
   font-size: 1.7rem;
   font-weight: bold;
-}
-/*# sourceMappingURL=styles.css.map */
+}/*# sourceMappingURL=styles.css.map */
