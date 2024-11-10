@@ -72,9 +72,10 @@ export default class GameBoard {
 
     #calculateMove(direction) {
         let moves = [];
-        let vTiles = Object.assign({}, this).tiles.map((tileRow) =>
+        let vTiles = this.tiles.map((tileRow) =>
             tileRow.map((tile) => tile.value)
         ); // Virtual tiles (a copy)
+        const mergedTiles = [];
         let vScore = this.score;
 
         for (let i = 0; i < 4; i++) {
@@ -143,8 +144,10 @@ export default class GameBoard {
                     // Объединяем плитки, если они равны по значению
                     else if (
                         vTiles[nextPos[0]][nextPos[1]] ===
-                        vTiles[currentTile[0]][currentTile[1]]
+                        vTiles[currentTile[0]][currentTile[1]] &&
+                        !mergedTiles.some(tile => tile === nextPos.toString())
                     ) {
+                        mergedTiles.push(nextPos.toString())
                         moves.push([currentTile, k, true]);
 
                         vTiles[nextPos[0]][nextPos[1]] =
